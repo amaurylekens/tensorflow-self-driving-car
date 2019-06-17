@@ -55,6 +55,10 @@ Then run the *drive.py* file to start the simulation.
 
 * [Tensorflow](https://www.tensorflow.org/) - The core open source library used to build the CNN
 
+## Result
+
+![Result](result.gif)
+
 ## Authors
 
 * **Lekens Amaury**

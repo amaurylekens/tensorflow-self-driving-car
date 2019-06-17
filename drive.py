@@ -6,17 +6,21 @@ from io import BytesIO
 from SDC_CNN import SDC_CNN
 import numpy as np
 import scipy
+#import cv2
 
 # create a Socket.IO server
 sio = socketio.Server()
 
 # create cnn
 sdc_cnn = SDC_CNN([66,200,3])
+i = 1
 
 # event sent by the simulator
 @sio.on('telemetry')
 def telemetry(sid, data):
     if data:
+        global i
+        i += 1
         # The current steering angle of the car
         steering_angle = float(data["steering_angle"])
         # The current throttle of the car, how hard to push peddle
@@ -27,6 +31,8 @@ def telemetry(sid, data):
         image = Image.open(BytesIO(base64.b64decode(data["image"])))
         image = np.asarray(image)
         image_resized = scipy.misc.imresize(image, [66, 200])
+
+        #cv2.imwrite("gif/frame" + str(i) + ".png", image)
 
         steer = sdc_cnn.predict(image_resized)
 

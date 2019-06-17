@@ -57,7 +57,9 @@ Then run the *drive.py* file to start the simulation.
 
 ## Result
 
-![Result](result.gif)
+<p align="center">
+  <img src="result.gif"/>
+</p>
 
 ## Authors
 

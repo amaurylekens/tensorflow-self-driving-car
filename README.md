@@ -59,7 +59,7 @@ Then run the *drive.py* file to start the simulation.
 ## Result
 
 <p align="center">
-  <img src="result.gif"/>
+  <img src="https://gph.is/g/aKn09L6"/>
 </p>
 
 ## Authors

@@ -43,7 +43,7 @@ def telemetry(sid, data):
             speed_limit = 25
 
         steer = steer[0,0]
-        throttle = 0.25 - steer**2 -(speed/speed_limit)**2
+        throttle = 0.20 - steer**2 -(speed/speed_limit)**2
 
         # response to the simulator with a steer angle and throttle
         send(steer, throttle)

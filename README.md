@@ -1,24 +1,12 @@
-# Artificial Intelligence Laboratory
-## Self Driving Car Simulation
-
+# Artificial Intelligence Laboratory - <br/>Self Driving Car Simulation
+## Convolutional Neural Network
 @ ECAM 2019
 
 This project consists of designing and developing an AI able to drive a car to keep it on the road in a simplified environment. 
 
+(*REM*: another solution that is part of the same project has been partially implemented. It uses [Semantic Segmentation](https://github.com/amaurylekens/SDC_Segnet).)
+
 The simulator is part of the *Udacity's Self-Driving Car Simulator* project available at the following address https://github.com/udacity/self-driving-car-sim
-
-## Algorithm
-We have implemented a **Convolutional Neural Network** (CNN) with Tensorflow in order to build our AI. The global network consist of 5 convolutional layers followed by 5 fully connected layers.
-The given output is the angle of the steering wheel.
-
-The speed of the car has been fixed to a particular value based on several tests.
-
-The inputs are the RBG images captured by the simulator and resized to 60x200. Whe used nearly 5000 of them with an epoch=400 (so each input has been used 400 times to train the model). The network has been trained using batches of size=400
-
-A type of *Gadient Descent* algorithm, the Adam Optimizer, has been used for the backpropagation method to update the weights (both for the kernels and the fully connected layers)
-
-![CNN Design](img/cnn-graph.png)
-
 
 ## Getting Started
 
